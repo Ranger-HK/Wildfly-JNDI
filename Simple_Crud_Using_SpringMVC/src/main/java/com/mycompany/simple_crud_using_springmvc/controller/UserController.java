@@ -2,11 +2,16 @@ package com.mycompany.simple_crud_using_springmvc.controller;
 
 import com.mycompany.simple_crud_using_springmvc.dto.UserDTO;
 import com.mycompany.simple_crud_using_springmvc.service.UserService;
+import com.mycompany.simple_crud_using_springmvc.util.Encryption;
 import com.mycompany.simple_crud_using_springmvc.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -19,7 +24,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-  /*  @Autowired
+    @Autowired
     Encryption en;
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -39,7 +44,7 @@ public class UserController {
             e.printStackTrace();
         }
         return new ResponseUtil(200, "Ok", null);
-    }*/
+    }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getAllUser() {
@@ -47,12 +52,12 @@ public class UserController {
 
     }
 
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+   /* @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil saveUser(@ModelAttribute UserDTO user) {
 
         userService.saveUser(new UserDTO(user.getUserID(), user.getUserName(), user.getAddress(), user.getEmail(), user.getContact(), user.getPassword(), LocalDate.now().toString(), " "));
         return new ResponseUtil(200, "Ok", null);
-    }
+    }*/
 
 
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
