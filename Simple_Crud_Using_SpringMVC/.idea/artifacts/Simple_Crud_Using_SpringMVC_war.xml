@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Simple_Crud_Using_SpringMVC:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Simple_Crud_Using_SpringMVC</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Simple_Crud_Using_SpringMVC-1.0.war">
+      <element id="artifact" artifact-name="Simple_Crud_Using_SpringMVC:war exploded" />
+    </root>
+  </artifact>
+</component>

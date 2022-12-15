@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Registration Form</title>
+    <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/fonts/css/all.css" rel="stylesheet"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" id="bootstrap-css" rel="stylesheet">
+    <link href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css" rel="stylesheet" type="text/css">
+
+    <style>
+
+
+        html, body {
+            background-image: url('https://getwallpapers.com/wallpaper/full/e/c/4/92616.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        .container {
+            height: 100%;
+            align-content: center;
+        }
+
+        .user-card {
+
+            height: 800px;
+            margin-top: 80px;
+            margin-bottom: auto;
+            width: 800px;
+            background-color: white !important;
+
+        }
+
+
+        .card-body {
+            position: relative;
+            top: 20px;
+        }
+
+
+        .input-group span {
+            width: 35px;
+            background-color: #FFC312;
+            color: black;
+            border: 0 !important;
+        }
+
+        .fa-user::before {
+            font-size: 25px;
+            left: 5px;
+            top: 7px;
+            position: relative;
+        }
+
+        .fa-solid {
+            font-size: 25px;
+            left: 8px;
+            top: 7px;
+            position: relative;
+        }
+
+        .fa-regular {
+            font-size: 22px;
+            left: 5px;
+            top: 10px;
+            position: relative;
+        }
+
+        .fa-envelope {
+            font-size: 22px;
+            left: 7px;
+            top: 10px;
+            position: relative;
+        }
+
+        .fa-users {
+            font-size: 20px;
+            left: 6px;
+            top: 10px;
+            position: relative;
+        }
+
+        .fa-lock {
+            font-size: 20px;
+            left: 8px;
+            top: 8px;
+            position: relative;
+        }
+
+        input:focus {
+            outline: 0 0 0 0 !important;
+            box-shadow: 0 0 0 0 !important;
+
+        }
+
+        .btn-md {
+            position: relative;
+            height: 50px;
+            width: 200px;
+            color: #ecf0f1;
+            background: #f39c12;
+            font-size: 25px;
+            font-weight: 600;
+            left: 268px;
+            top: 14px;
+            border-radius: 12px;
+        }
+
+
+        .fa-light:hover {
+            background: #bdc3c7;
+
+        }
+
+        .btn-primary {
+            position: relative;
+            top: 45px;
+            width: 430px;
+            left: 156px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        #back {
+            font-size: 50px;
+            top: -688px;
+            left: 696px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="user-card">
+            <div class="card-header">
+                <h1>Register</h1>
+
+
+            </div>
+            <div class="card-body">
+
+
+                <form action="#" class="form-horizontal" id="registerForm" method="post">
+
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label" for="name">User Id</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa-solid fa-image-portrait"></i></span>
+                                <input class="form-control" id="txtuserID" name="name" placeholder="Enter Your Id"
+                                       type="text"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label" for="name">User Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i aria-hidden="true" class="fa fa-user fa"></i></span>
+                                <input class="form-control" id="txtuserName" name="name" placeholder="Enter Your Name"
+                                       type="text"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label" for="email">Address</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa-regular fa-address-card"></i></span>
+                                <input class="form-control" id="txtaddress" name="email"
+                                       placeholder="Enter Your Address"
+                                       type="text"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label" for="email">Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i aria-hidden="true"
+                                                                   class="fa fa-envelope fa"></i></span>
+                                <input class="form-control" id="txtemail" name="email" placeholder="Enter Your Email"
+                                       type="text"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label" for="username">Contact</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i aria-hidden="true" class="fa fa-users fa"></i></span>
+                                <input class="form-control" id="txtcontact" name="username"
+                                       placeholder="Enter Your Contact"
+                                       type="text"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label" for="password">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i aria-hidden="true"
+                                                                   class="fa fa-lock fa-lg"></i></span>
+                                <input class="form-control" id="txtpassword" name="password"
+                                       placeholder="Enter your Password"
+                                       type="password"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <button class="btn btn-primary btn-lg btn-block login-button" id="btnSave" type="button">
+                            Registration
+                        </button>
+                    </div>
+
+
+                </form>
+                <a href="Login.html"><span><i class="fa-solid fa-circle-arrow-left" id="back"></i></span></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/validation/validation.js"></script>
+<script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+<script src="controller/RegistrationController.js"></script>
+
+
+</body>
+</html>

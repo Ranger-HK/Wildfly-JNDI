@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/stylesheet.css" rel="stylesheet"/>
+    <link href="assets/fonts/css/all.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" id="bootstrap-css" rel="stylesheet">
+    <link href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h1>Sign In</h1>
+                <div class="d-flex justify-content-end social_icon">
+                    <a href="https://github.com/"> <span><i class="fa-brands fa-square-github"></i></span></a>
+                    <a href="https://www.google.com/"><span><i class="fab fa-google-plus-square"></i></span></a>
+                    <a href="https://github.com/Ranger-HK?tab=repositories"><span><i class="fab fa-twitter-square"></i></span></a>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user" style=" font-size: 28px;"></i></span>
+                        </div>
+                        <input class="form-control" id="userID" placeholder="username" type="text">
+
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key" style=" font-size: 28px;"></i></span>
+                        </div>
+                        <input class="form-control" id="password" placeholder="password" type="password">
+                    </div>
+
+                    <div class="row align-items-center remember">
+                        <input type="checkbox">Remember Me
+                    </div>
+                    <div class="form-group">
+                        <input class="btn float-right login_btn" id="btnLog"
+                               style="     height: 60px; font-size: 30px; font-weight: 600 " type="button"
+                               value="Login">
+
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    If You Don't Have An Account?<a href="Registration.html">Register</a>
+                </div>
+                <div class="rights">
+                    <small>Created By Ravindu Prathibha</small>
+
+                </div>
+
+                <div class="lines">
+                    <hr>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+<!--        <script src="controller/LoginController.js"></script>-->
+<script>
+
+    $("#btnLog").click(function () {
+        //   console.log("Hello");
+        var userName = $("#userID").val();
+        var password = $("#password").val();
+
+        //    console.log(userName+" :"+password);
+        obj = {
+            userName: userName,
+            password: password
+        };
+
+        //invoked ajax
+        $.ajax({
+            url: 'http://localhost:8080/Simple_Crud_Using_SpringMVC-1.0/login?userName=' + obj.userName + '&password=' + obj.password,
+            method: 'POST',
+            success: function (res) {
+                console.log(res);
+                if (res.code === 200) {
+                    swal("Login success!", "You clicked the button!", "success");
+                    window.location = "Home.html";
+
+                } else {
+                    swal("User name or password incorrect!", "You clicked the button!", "error");
+
+                }
+            }
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
